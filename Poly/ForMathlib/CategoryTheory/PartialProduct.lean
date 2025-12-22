@@ -6,7 +6,7 @@ Authors: Sina Hazratpour
 import Mathlib.CategoryTheory.Limits.Shapes.Pullback.CommSq
 import Mathlib.CategoryTheory.Comma.Over.Pullback
 import Poly.ForMathlib.CategoryTheory.Comma.Over.Pullback
-import Mathlib.CategoryTheory.Closed.Cartesian
+import Mathlib.CategoryTheory.Monoidal.Closed.Cartesian
 import Mathlib.CategoryTheory.EqToHom
 
 /-! ## Partial Products

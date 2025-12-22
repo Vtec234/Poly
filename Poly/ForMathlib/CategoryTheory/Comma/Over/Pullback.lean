@@ -304,11 +304,6 @@ def starPullbackIsoStar [HasBinaryProducts C] [HasPullbacks C] {X Y : C} (f : X 
     star Y ⋙ pullback f ≅ star X :=
   conjugateIsoEquiv ((mapPullbackAdj f).comp (forgetAdjStar Y)) (forgetAdjStar X) (mapForget f)
 
--- from Over.Basic
-theorem iteratedSliceBackward_forget {X : C} (A : Over X) :
-    iteratedSliceBackward A ⋙ forget A = Over.map A.hom :=
-  rfl
-
 /-- The functor `Over.pullback f : Over Y ⥤ Over X` is naturally isomorphic to
 `Over.star : Over Y ⥤ Over (Over.mk f)` post-composed with the
 iterated slice equivlanece `Over (Over.mk f) ⥤ Over X`. -/

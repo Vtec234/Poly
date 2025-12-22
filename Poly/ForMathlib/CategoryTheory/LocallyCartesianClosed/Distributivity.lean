@@ -1,7 +1,7 @@
 /-
 Copyright (c) 2025 Sina Hazratpour. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Sina Hazratpour, Emily Riehl
+Authors: Sina Hazratpour, Mario Carneiro
 -/
 import Mathlib.CategoryTheory.Adjunction.Lifting.Right
 import Poly.ForMathlib.CategoryTheory.LocallyCartesianClosed.Basic
@@ -54,7 +54,7 @@ def exponentiableMorphism : ExponentiableMorphism (g f u) := by infer_instance
 
 namespace ExponentiableMorphism
 
-instance mapPullbackAdj_regularMono {C} [Category C] [HasPullbacks C] {A B : C} (F : A ⟶ B)
+def mapPullbackAdj_regularMono {C} [Category C] [HasPullbacks C] {A B : C} (F : A ⟶ B)
     (X : Over A) : RegularMono ((mapPullbackAdj F).unit.app X) := by
   let FU := Over.map F ⋙ Over.pullback F
   set η := (mapPullbackAdj F).unit
@@ -73,6 +73,7 @@ theorem of_isPullback {C' : Type u} [Category.{v} C'] [HasPullbacks C'] [HasTerm
   have : IsLeftAdjoint _ :=
     ⟨_, ⟨(mapPullbackAdj f).comp (adj g) |>.ofNatIsoLeft (pullbackMapIsoSquare H.flip).symm⟩⟩
   isLeftAdjoint_triangle_lift (Over.pullback fst) (mapPullbackAdj snd)
+    (mapPullbackAdj_regularMono _)
 
 end ExponentiableMorphism
 

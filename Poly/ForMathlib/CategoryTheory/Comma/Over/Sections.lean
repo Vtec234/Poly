@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Sina Hazratpour
 -/
 import Poly.ForMathlib.CategoryTheory.Comma.Over.Pullback
-import Mathlib.CategoryTheory.Closed.Cartesian
+import Mathlib.CategoryTheory.Monoidal.Closed.Cartesian
 
 /-!
 # The section functor as a right adjoint to the star functor
@@ -12,6 +12,7 @@ import Mathlib.CategoryTheory.Closed.Cartesian
 We show that if `C` is cartesian closed then `star I : C ⥤ Over I`
 has a right adjoint `sectionsFunctor` whose object part is the object of sections
 of `X` over `I`.
+
 
 -/
 

@@ -4,10 +4,10 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Steve Awodey, Sina Hazratpour
 -/
 
-import Mathlib.CategoryTheory.Closed.Types
+import Mathlib.CategoryTheory.Monoidal.Closed.Types
 import Mathlib.CategoryTheory.Limits.Constructions.Over.Basic
 import Poly.ForMathlib.CategoryTheory.LocallyCartesianClosed.Basic
-import Mathlib.CategoryTheory.Closed.FunctorCategory.Basic
+import Mathlib.CategoryTheory.Monoidal.Closed.FunctorCategory.Basic
 
 
 noncomputable section
